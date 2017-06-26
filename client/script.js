@@ -74,23 +74,20 @@ function populateUsers() {
 
 function addChirpDiv(chirp) {
     var $chirpDiv = $('<div class="chirp"></div>');
+    var $link = $('<a href="/chirps/' + chirp.id + '"></a>');
     var $message = $('<p></p>');
     var $user = $('<h4></h4>');
     var $timestamp = $('<h5></h5>');
-    var $deletebtn = $('<button class="delete-button">Delete Chirp</button>');
-    
-    $deletebtn.click(function() {
-        deleteChirp(chirp.id);
-    });
 
     $message.text(chirp.message);
     $user.text(chirp.userName);
     $timestamp.text(new Date(chirp.timestamp).toLocaleString());
 
-    $message.appendTo($chirpDiv);
+    $message.appendTo($link);
+    
+    $link.appendTo($chirpDiv)
     $user.appendTo($chirpDiv);
     $timestamp.appendTo($chirpDiv);
-    $deletebtn.appendTo($chirpDiv);
 
     $chirpDiv.appendTo($chirpList);
 }

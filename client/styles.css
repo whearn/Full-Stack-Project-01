@@ -18,3 +18,17 @@ body {
     border: darkblue solid 2px;
     border-radius: 20px;
 }
+
+.chirp button {
+    margin-bottom: 1.5em;
+    margin: 0 0.5em 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: darkblue;
+}
